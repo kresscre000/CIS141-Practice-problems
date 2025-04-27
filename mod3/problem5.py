@@ -1,1 +1,1 @@
-
+print("Trash" + "|" + "Recycling" + "|" + "Metal")
