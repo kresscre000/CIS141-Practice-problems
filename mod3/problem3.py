@@ -1,1 +1,5 @@
-
+sentence = input("Please give a sentence: ")
+word = input("What word are you trying to find?: ")
+position = sentence.find(word)
+found = (position != -1)
+print(found)
