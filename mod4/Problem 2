@@ -1,1 +1,5 @@
-
+sensor_threshold = 5
+if sensor_threshold < 8:
+    print("Headlights On")
+else:
+    print("Headlights Off")
