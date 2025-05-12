@@ -1,1 +1,3 @@
-
+string = "Welcome back."
+for char in string:
+    print(char.upper())
