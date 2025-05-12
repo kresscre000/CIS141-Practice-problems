@@ -1,5 +1,0 @@
-while True:
-    number = int(input("Enter a number. If you are done, enter 0.): "))
-    if number == 0:
-        break  
-        print("You entered:", number)
