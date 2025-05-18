@@ -1,1 +1,8 @@
+words = ["cat", "kangaroo", "dog", "lion", "rat", "bird", "octopus", "raccoon", "red panda"]
 
+filtered = []
+for word in words:
+    if len(word) > 3:
+        filtered.append(word)
+
+print("Filtered list:", filtered)
