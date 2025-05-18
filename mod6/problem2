@@ -1,1 +1,9 @@
+words = ["Olympic", "games", "Olympic", "training", "world", "Olympic", "sport", "champion", "Olympic", "College", "Olympic", "mountains"]
+
+count = 0
+for word in words:
+    if word == "Olympic":
+        count += 1
+
+print("The word 'Olympic' appears", count, "times.")
 
