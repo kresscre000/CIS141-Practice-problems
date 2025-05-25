@@ -1,1 +1,10 @@
+def level_up(xp):
+    if xp < 0:
+        return "No experience points"
+    elif xp <= 99:
+        return 1
+    elif xp <= 199:
+        return 2
+    else:
+        return 3
 
