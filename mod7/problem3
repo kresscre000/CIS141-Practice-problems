@@ -1,1 +1,11 @@
-
+def type_advantage(attacker, defender):
+    attacker = attacker.lower()
+    defender = defender.lower()
+    
+    if attacker == "fairy" and defender == "dragon":
+        return "Super Effective"
+    elif attacker == "dragon" and defender == "fairy":
+        return "Not Very Effective"
+    else:
+        return "Neutral" 
+#wanted to use my favorite typings instead, hope thats okay!
