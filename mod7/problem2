@@ -1,1 +1,7 @@
-
+def palindrome(s):
+    s = s.lower()
+    return s == s[::-1]
+print(palindrome("Racecar"))
+print(palindrome("CIS141"))
+print(palindrome("Civic"))
+print(palindrome("TacoCat"))
