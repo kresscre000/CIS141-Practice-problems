@@ -1,1 +1,30 @@
+#File name Song_lyrics.txt
+Ring around the rosy,
+A pocket full of posies.
+Ashes, ashes,
+We all fall down.
+
+def count_word_frequencies(filename):
+    try:
+        with open(filename, 'r') as file:
+            lyrics = file.read().lower()
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+        return
+
+   
+import string
+lyrics = lyrics.translate(str.maketrans('', '', string.punctuation))
+
+
+print("Enter 5 words to check their frequency in the lyrics:")
+words_to_count = [input(f"Word {i+1}: ").lower().strip() for i in range(5)]
+
+words = lyrics.split()
+word_count = {word: words.count(word) for word in words_to_count}
+
+print("\nWord Frequencies:")
+print(word_count)
+
+
 
