@@ -1,0 +1,19 @@
+#poll.txt
+yea,yea,yea,yea,nay,nay,yea,yea,nay,nay,nay,yea,nay
+
+def count_votes(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read().lower()
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+        return
+
+    votes = [vote.strip() for vote in content.split(',')] 
+
+    yea_count = votes.count('yea')
+    nay_count = votes.count('nay')
+
+    print(f"Yea votes: {yea_count}")
+    print(f"Nay votes: {nay_count}")
+count_votes('poll.txt')
