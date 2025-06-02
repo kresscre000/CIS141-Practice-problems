@@ -1,1 +1,27 @@
+def log_hiking_trip():
+    filename = 'hiking_log.txt'
+
+    print("Please enter your hiking trips. Type 0 as the hike name to finish.\n")
+
+    while True:
+        hike_name = input("Enter hike name (or 0 to stop): ").strip()
+        if hike_name == '0':
+            break
+
+        distance = input("Enter distance in miles: ").strip()
+        if not distance.replace('.', '', 1).isdigit():
+            print("Invalid distance. Please enter a number.")
+            continue
+
+        with open(filename, 'a') as file:
+            file.write(f"{hike_name} - {distance} miles\n")
+        print("Hike logged!\n")
+
+    # Print the contents of the file
+    print("\nYour Hiking Log:")
+    try:
+        with open(filename, 'r') as file:
+            print(file.read())
+    except FileNotFoundError:
+        print("No hiking log found.")
 
